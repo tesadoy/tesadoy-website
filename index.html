@@ -317,6 +317,7 @@
     aspect-ratio:16/10; position:relative; overflow:hidden;
     display:flex; align-items:center; justify-content:center;
   }
+  .project-image img{width:100%; height:100%; object-fit:cover; display:block;}
   .project-image span{
     font-family:var(--mono); font-size:11px; letter-spacing:0.1em; text-transform:uppercase;
     color:rgba(243,241,233,0.55); border:1px dashed rgba(243,241,233,0.3); padding:8px 16px;
@@ -348,12 +349,11 @@
     display:flex; align-items:center; justify-content:center;
     background:var(--ocean-dim); border:1px solid var(--line);
     font-family:var(--mono); font-size:15px; color:var(--brass-light);
-    margin-bottom:20px;
+    margin-bottom:20px; overflow:hidden;
   }
   .team-card:nth-child(even) .team-avatar{color:var(--tiffany-light); border-color:rgba(129,216,208,0.35);}
-  .team-avatar.has-photo{
-    background-size:cover; background-position:center; border-color:var(--brass);
-  }
+  .team-avatar.has-photo{border-color:var(--brass);}
+  .team-avatar img{width:100%; height:100%; object-fit:cover; display:block;}
   .team-card h3{
     font-family:var(--serif); font-weight:400; font-size:19px; margin-bottom:4px;
   }
@@ -568,7 +568,7 @@
 <header>
   <div class="wrap nav-inner">
     <a href="#top" class="brandmark">
-      <img src="assets/logo-header.png" alt="Tesadoy Dynamics logo">
+      <img src="assets/logo-header.png" alt="Tesadoy Dynamics logo" width="360" height="292">
     </a>
     <nav class="primary-nav" id="primaryNav">
       <a href="#about">About</a>
@@ -590,7 +590,7 @@
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-photo">
-      <img src="assets/hero-photo.jpg" alt="Abuja City Gate, Nigeria" loading="lazy">
+      <img src="assets/hero-photo.jpg" alt="Abuja City Gate, Nigeria" width="610" height="1079" fetchpriority="high">
     </div>
 
     <div class="hero-content">
@@ -615,9 +615,9 @@
       <div class="affiliations">
         <span class="affiliations-label">Working with</span>
         <div class="affiliations-row">
-          <img src="assets/partner-statesman.png" alt="Statesman Logistics and Autos">
-          <img src="assets/partner-bambizz.png" alt="BAMBIZZ International">
-          <img src="assets/partner-evans.png" alt="E-Vans Prime Properties">
+          <img src="assets/partner-statesman.png" alt="Statesman Logistics and Autos" width="300" height="242" loading="lazy">
+          <img src="assets/partner-bambizz.png" alt="BAMBIZZ International" width="300" height="300" loading="lazy">
+          <img src="assets/partner-evans.png" alt="E-Vans Prime Properties" width="289" height="300" loading="lazy">
         </div>
       </div>
     </div>
@@ -711,25 +711,25 @@
       </div>
       <div class="project-grid">
         <div class="project-card reveal">
-          <div class="project-image proj-1" style="background-image:url('assets/project-construction.jpg'); background-size:cover; background-position:center;"></div>
+          <div class="project-image proj-1"><img src="assets/project-construction.jpg" alt="The Meridian Complex construction site" width="900" height="562" loading="lazy"></div>
           <div class="project-tag">Construction</div>
           <h3>The Meridian Complex</h3>
           <p>Reinforced concrete framing and structural staircase works for a multi-storey commercial development.</p>
         </div>
         <div class="project-card reveal">
-          <div class="project-image proj-2" style="background-image:url('assets/project-renovation.jpg'); background-size:cover; background-position:center;"></div>
+          <div class="project-image proj-2"><img src="assets/project-renovation.jpg" alt="The Vantage Residence interior fit-out" width="900" height="562" loading="lazy"></div>
           <div class="project-tag">Renovation &amp; Interior Finishing</div>
           <h3>The Vantage Residence</h3>
           <p>Full interior fit-out of a private residence — bespoke lighting, bar, and lounge finishing throughout.</p>
         </div>
         <div class="project-card reveal">
-          <div class="project-image proj-3" style="background-image:url('assets/project-agro.jpg'); background-size:cover; background-position:center;"></div>
+          <div class="project-image proj-3"><img src="assets/project-agro.jpg" alt="Tesadoy Farms agro-business site" width="900" height="562" loading="lazy"></div>
           <div class="project-tag">Agro-Business</div>
           <h3>Tesadoy Farms</h3>
           <p>Row-crop cultivation and field management across a multi-hectare production site.</p>
         </div>
         <div class="project-card reveal">
-          <div class="project-image proj-4" style="background-image:url('assets/project-tech.jpg'); background-size:cover; background-position:center;"></div>
+          <div class="project-image proj-4"><img src="assets/project-tech.jpg" alt="The Nexus Platform digital solution" width="900" height="562" loading="lazy"></div>
           <div class="project-tag">Technology &amp; Digital Solutions</div>
           <h3>The Nexus Platform</h3>
           <p>An integrated digital platform linking clients, data, and services across every division of the Group.</p>
@@ -746,22 +746,22 @@
       </div>
       <div class="team-grid">
         <div class="team-card reveal">
-          <div class="team-avatar has-photo" style="background-image:url('assets/team-tesleem.jpg')" role="img" aria-label="Tesleem Oyedele"></div>
+          <div class="team-avatar has-photo"><img src="assets/team-tesleem.jpg" alt="Tesleem Oyedele" width="220" height="220" loading="lazy"></div>
           <h3>Tesleem Oyedele</h3>
           <div class="team-role">Group Chief Executive</div>
         </div>
         <div class="team-card reveal">
-          <div class="team-avatar has-photo" style="background-image:url('assets/team-bamidele.jpg')" role="img" aria-label="Bamidele Adisa"></div>
+          <div class="team-avatar has-photo"><img src="assets/team-bamidele.jpg" alt="Bamidele Adisa" width="220" height="220" loading="lazy"></div>
           <h3>Bamidele Adisa</h3>
           <div class="team-role">Chief Operating Officer</div>
         </div>
         <div class="team-card reveal">
-          <div class="team-avatar has-photo" style="background-image:url('assets/team-lateef.jpg')" role="img" aria-label="Lateef Adeyemi"></div>
+          <div class="team-avatar has-photo"><img src="assets/team-lateef.jpg" alt="Lateef Adeyemi" width="220" height="220" loading="lazy"></div>
           <h3>Lateef Adeyemi</h3>
           <div class="team-role">Chief Financial Officer</div>
         </div>
         <div class="team-card reveal">
-          <div class="team-avatar has-photo" style="background-image:url('assets/team-christian.jpg')" role="img" aria-label="Christian Celestine"></div>
+          <div class="team-avatar has-photo"><img src="assets/team-christian.jpg" alt="Christian Celestine" width="220" height="220" loading="lazy"></div>
           <h3>Christian Celestine</h3>
           <div class="team-role">Head of Private Equity</div>
         </div>
@@ -870,7 +870,7 @@
 <footer>
   <div class="wrap footer-inner">
     <div class="footer-brand">
-      <img src="assets/logo-footer.png" alt="Tesadoy Dynamics logo"><p class="footer-tagline">Crafting excellence in every project.</p>
+      <img src="assets/logo-footer.png" alt="Tesadoy Dynamics logo" width="360" height="292" loading="lazy"><p class="footer-tagline">Crafting excellence in every project.</p>
       <p>A diversified holding group operating across construction, technology, agriculture, and private markets.</p>
     </div>
     <div class="footer-col">
@@ -922,7 +922,16 @@
     siteHeader.style.borderBottomColor = `rgba(14,30,82,${0.10 - t * 0.03})`;
   };
   updateHeaderFade();
-  window.addEventListener('scroll', updateHeaderFade, { passive: true });
+  let headerFadeTicking = false;
+  window.addEventListener('scroll', () => {
+    if (!headerFadeTicking) {
+      requestAnimationFrame(() => {
+        updateHeaderFade();
+        headerFadeTicking = false;
+      });
+      headerFadeTicking = true;
+    }
+  }, { passive: true });
 
   // Mobile nav toggle
   const menuToggle = document.getElementById('menuToggle');
